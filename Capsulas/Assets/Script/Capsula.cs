@@ -2,39 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Capsula : MonoBehaviour
 {
     [SerializeField]
-    Slider sliderTime;   
-    
+    Slider sliderTime;
 
-    float iniTime = 0;
+    [SerializeField]
+    TextMeshProUGUI textTime;
+
+    [SerializeField]
+    GameObject prefab, canvas, spawn;
+
+    float timer = 0;
     float time;
-    float minTime = 10f;
-    float maxTime = 30f;
+    float timeLeft;
+    float minTime = 1f;
+    float maxTime = 10f;
+
+    Vector3 position;
     // Start is called before the first frame update
     void Start()
     {
-        time = Random.Range(minTime, maxTime);       
+        //time = Random.Range(minTime, maxTime);       
+
+        //sliderTime.maxValue = time;  
+    }
+
+    private void OnEnable()
+    {
+        canvas.GetComponent<Canvas>().worldCamera = Camera.main;
+        
+        time = Random.Range(minTime, maxTime);
 
         sliderTime.maxValue = time;
-        
-
-        Debug.Log("Tiempo aleatorio: " + time);
     }
 
     // Update is called once per frame
     void Update()
     {
-        iniTime += 1f * Time.deltaTime;
-        sliderTime.value = time - iniTime;
+        timer += Time.deltaTime;
+        timeLeft = time - timer;
+        sliderTime.value = timeLeft;
+        textTime.text = timeLeft.ToString();
         
-        if(iniTime >= time)
+        if(timeLeft <= 0)
         {
+            position = gameObject.transform.position;
             Destroy(gameObject);
+            spawn.GetComponent<Spawn>().Spwan();
         }
-
-        Debug.Log("Tiempo: " + iniTime);
     }
 }
