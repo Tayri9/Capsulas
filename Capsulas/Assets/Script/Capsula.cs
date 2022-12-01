@@ -20,6 +20,7 @@ public class Capsula : MonoBehaviour
     float timeLeft;
     float minTime = 1f;
     float maxTime = 10f;
+    float timeSpawn;
 
     Vector3 position;
     // Start is called before the first frame update
@@ -51,7 +52,9 @@ public class Capsula : MonoBehaviour
         {
             position = gameObject.transform.position;
             Destroy(gameObject);
-            spawn.GetComponent<Spawn>().Spwan();
+            spawn.GetComponent<Spawn>().Spawner();
         }
+
     }
+
 }
