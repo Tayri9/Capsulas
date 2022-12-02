@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,6 +199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2669136520576680604, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -263,6 +267,10 @@ PrefabInstance:
     - target: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
       propertyPath: m_Name
       value: Capsule (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2669136520576680604, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
       propertyPath: m_RootOrder
@@ -507,6 +515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2669136520576680604, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -571,6 +583,10 @@ PrefabInstance:
     - target: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
       propertyPath: m_Name
       value: Capsule (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2669136520576680604, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
       propertyPath: m_RootOrder

@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2669136520576680579, guid: c21f20a6cbc35a541a35f4ced84cbd21, type: 3}
+  particles: {fileID: 7535601510531871607, guid: 39baac83aa6f18c4d8b88d549ed6440f, type: 3}

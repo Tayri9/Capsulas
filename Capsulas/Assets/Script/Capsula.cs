@@ -13,16 +13,14 @@ public class Capsula : MonoBehaviour
     TextMeshProUGUI textTime;
 
     [SerializeField]
-    GameObject prefab, canvas, spawn;
+    GameObject prefab, canvas, spawn, particles;
 
-    float timer = 0;
+    //float timer = 0;
     float time;
-    float timeLeft;
-    float minTime = 1f;
-    float maxTime = 10f;
-    float timeSpawn;
+    //float timeLeft;
+    float minTime = 10f;
+    float maxTime = 30f;
 
-    Vector3 position;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,18 +41,34 @@ public class Capsula : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         timer += Time.deltaTime;
         timeLeft = time - timer;
         sliderTime.value = timeLeft;
         textTime.text = timeLeft.ToString();
-        
+
         if(timeLeft <= 0)
         {
-            position = gameObject.transform.position;
-            Destroy(gameObject);
-            spawn.GetComponent<Spawn>().Spawner();
+            DestroyCapsule();
         }
-
+        */
+        time -= Time.deltaTime;
+        sliderTime.value = time;
+        textTime.text = time.ToString();
+         if(time <= 0)
+         {
+            DestroyCapsule();
+         }
     }
 
+    private void DestroyCapsule()
+    {
+        Instantiate(particles, gameObject.transform.position, Quaternion.identity);
+        LeanTween.scale(gameObject, Vector3.zero, 0.5f).setOnComplete( () =>
+        {
+            
+            Destroy(gameObject);
+            spawn.GetComponent<Spawn>().Spawner();
+        });        
+    }
 }

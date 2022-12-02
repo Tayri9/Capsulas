@@ -193,6 +193,7 @@ MonoBehaviour:
   prefab: {fileID: 2669136520576680579}
   canvas: {fileID: 2669136522274311300}
   spawn: {fileID: 4780669585473201364, guid: ce74b3743b6c80c47999c6df72b36f1d, type: 3}
+  particles: {fileID: 7535601510531871607, guid: d8ea025e94a9eee4a93cb10c7516b62f, type: 3}
 --- !u!1 &2669136520842382691
 GameObject:
   m_ObjectHideFlags: 0
